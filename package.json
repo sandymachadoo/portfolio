@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "<div align=\"center\"> \r \t<img src=\"https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5\" alt=\"HTML Badge\" /> \r \t<img src=\"https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3&logoColor=white\" alt=\"CSS Badge\" /> \r \t<img src=\"https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black\" alt=\"JavaScript Badge\" /> \r </div>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandymachadoo/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandymachadoo/portfolio/issues"
+  },
+  "homepage": "https://github.com/sandymachadoo/portfolio#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
