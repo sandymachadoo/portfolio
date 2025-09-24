@@ -221,7 +221,9 @@ color: #1d2c2e;
 
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  color: #034d49;;
-  text-shadow: 1px 1px 0 rgb(240, 228, 238);
+  text-shadow: 1px 1px 0 rgb(255, 247, 254);
+   text-align: center;
+   margin-bottom: 20px;
 
 }
 
@@ -412,71 +414,125 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 /* Seção Sobre Mim */
 .sobre-section {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px 20px;
-  background-color: rgba(242, 248, 248, 0.05);
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  color: #161012;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  text-align: justify;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* ... mantenha suas outras propriedades aqui ... */
+  position: relative; /* Isso é crucial para que o posicionamento das fotos funcione */
 }
 
 .sobre-section h2 {
-  font-size: 2rem;
-   color: #034d49;;
-  text-shadow: 2px 2px 0 rgba(238, 233, 237, 0.685);;
-  margin-bottom: 20px;
-  text-align: center;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    color: #034d49;
+    text-shadow: 2px 2px 0 rgba(238, 233, 237, 0.685);
+    /* Adicione estas duas linhas abaixo */
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Adicione estas novas regras no seu CSS */
+
+/* Container que servirá de base para o posicionamento das fotos */
+.galeria-espalhada {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* `pointer-events: none;` evita que o container bloqueie cliques no texto da página */
+  pointer-events: none; 
 }
 
-.intro-habilidades {
-  font-size: 1rem;
-  color: #0d1f1e;;
-  margin-bottom: 25px;
-  text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* Estilo para cada foto (a base) */
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: absolute; /* Habilita o posicionamento livre */
+  /* `pointer-events: auto;` permite que você interaja com a foto (ex: o hover) */
+  pointer-events: auto; 
 }
 
-.habilidades-lista {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.foto-perfil:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.habilidade {
-  background-color: rgb(2, 69, 90);
-  padding: 6px 14px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  color: #faf8f8;
-  font-weight: normal;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* Posicionamento individual de cada foto */
+.foto-1 {
+  top: 20px;
+  left: -50px;
+}
+
+.foto-2 {
+  top: 150px;
+  right: -50px;
+}
+
+.foto-3 {
+  bottom: 20px;
+  left: -30px;
 }
 
 .habilidades-section {
- font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- color: #024044;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-.habilidade-soft {
-   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- color: #024044;
+/* Título principal da seção */
+.habilidades-section .titulo-habilidades {
+    text-align: center;
+    font-size: 2rem;
+    color: #057570;
+    margin-bottom: 40px;
 }
 
-.titulo-habilidades {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.5rem;
-  color: #057570;
-  text-shadow: 1px 1px 0 rgb(240, 228, 238);
-  margin-bottom: 16px; 
-  text-align: center;
+/* Container que divide em duas colunas */
+.habilidades-container {
+    display: flex; /* Habilita o Flexbox */
+    justify-content: space-between; /* Espaço entre as colunas */
+    gap: 40px; /* Adiciona um espaço entre as colunas */
+    flex-wrap: wrap; /* Permite que as colunas quebrem a linha em telas menores */
+}
 
+/* Estilo para cada coluna (hard skills e soft skills) */
+.coluna {
+    flex: 1; /* Permite que as colunas cresçam e ocupem o espaço disponível */
+    min-width: 280px; /* Garante que as colunas não fiquem muito estreitas */
+    background-color: #f0f2f2;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo para os subtítulos das colunas */
+.subtitulo-habilidades {
+    font-size: 1.2rem;
+    color: #034d49;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Lista das habilidades, organizadas por flexbox para o wrap */
+.habilidades-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Estilo individual para cada habilidade (tag) */
+.habilidade {
+    background-color: rgb(2, 69, 90);
+    color: #faf8f8;
+    padding: 8px 16px;
+    border-radius: 20px; /* Mais arredondado */
+    font-size: 0.95rem;
+    font-weight: normal;
+    transition: background-color 0.3s;
+}
+
+.habilidade:hover {
+    background-color: #02506a;
 }
