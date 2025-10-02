@@ -5,19 +5,20 @@
 }
 
 body {
+  
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Layout principal com CSS Grid */
+
 .home-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
 }
 
-/* Seção esquerda */
+
 .left-section {
-  background-color: #005649; /* Roxo escuro */
+  background-color: #005649; 
   color: #fff;
   padding: 50px;
   display: flex;
@@ -30,7 +31,7 @@ body {
   font-weight: bold;
   line-height: 1;
   margin-bottom: 20px;
-   color: #fff;
+  color: #fff;
 }
 
 .description {
@@ -40,7 +41,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* Estilos dos links de navegação */
 .menu-principal {
   display: flex;
   gap: 15px;
@@ -62,7 +62,6 @@ body {
   color: #1a0827;
 }
 
-/* Seção direita */
 .right-section {
   background-color: #e7efda; /* Verde neon */
   position: relative;
@@ -71,7 +70,6 @@ body {
   align-items: center;
 }
 
-/* Contorno branco da foto */
 .image-box {
   width: 400px;
   height: 400px;
@@ -88,9 +86,15 @@ body {
   left: 20px;
 }
 
+
 h1 {
   font-size: 2em;
   margin-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+  color: #333;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -102,6 +106,87 @@ p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ======================================= */
+/* 3. NAVBAR                               */
+/* ======================================= */
+
+.navbar {
+  background: linear-gradient(90deg, #fbfdfd 0%, #eff1f1 100%);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  animation: pulseBackground 6s infinite alternate ease-in-out;
+}
+
+@keyframes pulseBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 28px;
+  font-family: 'Exo', sans-serif;
+  color: #160505;
+  text-shadow: 0 0 10px #f8f0ee, 0 0 20px #e0e9e6;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #07312e;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-links a:hover {
+  background-color: #016269;
+  color: #dae2e2;
+}
 
 
 .projetos-container {
@@ -167,64 +252,16 @@ p {
   background-color: #024744;
 }
 
-@media (max-width: 768px) {
-  .projeto-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .projeto-card img {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .botoes a {
-    margin-bottom: 10px;
-  }
-}
-
-.botoes a:hover {
-  background-color: #24635c;
-}
-
-header {
-  background-color: #ff7f50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-h2 {
-  color: #333;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-p {
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 #generation {
-
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-color: #1d2c2e;
-
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #1d2c2e;
 }
 #generation h2 {
-
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- color: #034d49;;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #034d49;
   text-shadow: 1px 1px 0 rgb(255, 247, 254);
-   text-align: center;
-   margin-bottom: 20px;
-
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .galeria-fotos {
@@ -236,10 +273,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .galeria-fotos img {
-  width: 400px;           
-  height: 200px;          
-  object-fit: cover;      
-  border-radius: 12px;    
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(236, 232, 232, 0.15);
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -249,86 +286,119 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   transform: scale(1.05);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.sobre-section {
+  position: relative;
 }
 
-.navbar {
-  background: linear-gradient(90deg, #fbfdfd 0%, #eff1f1 100%);
-  padding: 18px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.sobre-section h2 {
+    font-size: 2rem;
+    color: #034d49;
+    text-shadow: 2px 2px 0 rgba(238, 233, 237, 0.685);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.galeria-espalhada {
   width: 100%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  animation: pulseBackground 6s infinite alternate ease-in-out;
-  
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
-@keyframes pulseBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-.navbar .container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 28px;
-  font-family: 'Exo', sans-serif;
-  color: #160505;
-  text-shadow: 0 0 10px #f8f0ee, 0 0 20px #e0e9e6;
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  position: absolute;
+  pointer-events: auto;
 }
 
-.logo:hover {
-  transform: scale(1.05);
+.foto-perfil:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.logo-img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
+.foto-1 {
+  top: 20px;
+  left: -50px;
 }
 
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
+.foto-2 {
+  top: 150px;
+  right: -50px;
 }
 
-.nav-links a {
-  color: #07312e;
-  text-decoration: none;
-  font-weight: 700; 
-  font-size: 1.05rem; 
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: background-color 0.3s, color 0.3s;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.foto-3 {
+  bottom: 20px;
+  left: -30px;
 }
 
-.nav-links a:hover {
-  background-color: #016269; 
-  color: #dae2e2;
+.habilidades-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
+.habilidades-section .titulo-habilidades {
+    text-align: center;
+    font-size: 2rem;
+    color: #057570;
+    margin-bottom: 40px;
+}
+
+.habilidades-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 280px;
+    background-color: #f0f2f2;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.subtitulo-habilidades {
+    font-size: 1.2rem;
+    color: #034d49;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.habilidades-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.habilidade {
+    background-color: rgb(2, 69, 90);
+    color: #faf8f8;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: normal;
+    transition: background-color 0.3s;
+}
+
+.habilidade:hover {
+    background-color: #02506a;
+}
+
+/* ======================================= */
+/* 8. TIMELINE (Experiência)               */
+/* ======================================= */
 
 .timeline {
   position: relative;
@@ -362,6 +432,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #f5f3f3;
   margin-top: 5px;
 }
+
 
 .footer {
   margin-top: 80px;
@@ -412,127 +483,133 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #555;
 }
 
-/* Seção Sobre Mim */
-.sobre-section {
-  /* ... mantenha suas outras propriedades aqui ... */
-  position: relative; /* Isso é crucial para que o posicionamento das fotos funcione */
-}
 
-.sobre-section h2 {
-    font-size: 2rem;
-    color: #034d49;
-    text-shadow: 2px 2px 0 rgba(238, 233, 237, 0.685);
-    /* Adicione estas duas linhas abaixo */
-    text-align: center;
-    margin-bottom: 20px;
-}
-/* Adicione estas novas regras no seu CSS */
+@media screen and (max-width: 768px) {
+    
+    .home-container {
+        
+        grid-template-columns: 1fr;
+        
+        height: auto; 
+    }
+    
+    .left-section {
+        padding: 40px 20px;
+        order: 2; 
+        text-align: center; 
+    }
 
-/* Container que servirá de base para o posicionamento das fotos */
-.galeria-espalhada {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* `pointer-events: none;` evita que o container bloqueie cliques no texto da página */
-  pointer-events: none; 
-}
+    .right-section {
+        padding: 40px 20px;
+        order: 1; /* Faz a imagem vir primeiro */
+    }
 
-/* Estilo para cada foto (a base) */
-.foto-perfil {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  position: absolute; /* Habilita o posicionamento livre */
-  /* `pointer-events: auto;` permite que você interaja com a foto (ex: o hover) */
-  pointer-events: auto; 
-}
+    .title {
+        font-size: 2em; 
+        margin-bottom: 15px;
+    }
 
-.foto-perfil:hover {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
+    .description {
+        font-size: 1em; 
+        max-width: 100%; 
+        margin: 0 auto 30px auto; 
+    }
+    
+    
+    .menu-principal {
+        flex-direction: column; 
+        gap: 10px;
+        margin-top: 30px;
+    }
 
-/* Posicionamento individual de cada foto */
-.foto-1 {
-  top: 20px;
-  left: -50px;
-}
+    .menu-principal a {
+        display: block; 
+        padding: 15px 20px;
+    }
 
-.foto-2 {
-  top: 150px;
-  right: -50px;
-}
 
-.foto-3 {
-  bottom: 20px;
-  left: -30px;
-}
+    
+    .image-box {
+        width: 250px; 
+        height: 250px;
+        margin: 0 auto; 
+    }
 
-.habilidades-section {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
+    .profile-photo {
+        top: 10px;
+        left: 10px;
+    }
+    
+   
+    .navbar .container {
+        flex-direction: column; 
+        padding: 15px 20px;
+    }
 
-/* Título principal da seção */
-.habilidades-section .titulo-habilidades {
-    text-align: center;
-    font-size: 2rem;
-    color: #057570;
-    margin-bottom: 40px;
-}
+    .nav-links {
+        flex-direction: column; 
+        width: 100%;
+        margin-top: 15px; 
+        gap: 5px; 
+    }
 
-/* Container que divide em duas colunas */
-.habilidades-container {
-    display: flex; /* Habilita o Flexbox */
-    justify-content: space-between; /* Espaço entre as colunas */
-    gap: 40px; /* Adiciona um espaço entre as colunas */
-    flex-wrap: wrap; /* Permite que as colunas quebrem a linha em telas menores */
-}
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+        width: 100%; 
+    }
+    
+   
+    .projetos-container {
+        gap: 20px;
+    }
+    
+    .projeto-card {
+        flex-direction: column; 
+        text-align: center;
+        gap: 20px;
+    }
 
-/* Estilo para cada coluna (hard skills e soft skills) */
-.coluna {
-    flex: 1; /* Permite que as colunas cresçam e ocupem o espaço disponível */
-    min-width: 280px; /* Garante que as colunas não fiquem muito estreitas */
-    background-color: #f0f2f2;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+    .projeto-card img {
+        width: 100%;
+        max-width: 250px; 
+        height: auto;
+    }
 
-/* Estilo para os subtítulos das colunas */
-.subtitulo-habilidades {
-    font-size: 1.2rem;
-    color: #034d49;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
+    .botoes a {
+        margin-bottom: 10px;
+    }
 
-/* Lista das habilidades, organizadas por flexbox para o wrap */
-.habilidades-lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
+   
+    .habilidades-container {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    
+    .coluna {
+        min-width: 100%;
+    }
+    
+     
+    .galeria-fotos {
+        flex-direction: column; 
+        gap: 20px;
+    }
 
-/* Estilo individual para cada habilidade (tag) */
-.habilidade {
-    background-color: rgb(2, 69, 90);
-    color: #faf8f8;
-    padding: 8px 16px;
-    border-radius: 20px; /* Mais arredondado */
-    font-size: 0.95rem;
-    font-weight: normal;
-    transition: background-color 0.3s;
-}
+    .galeria-fotos img {
+        width: 100%; 
+        height: auto; 
+    }
+    
 
-.habilidade:hover {
-    background-color: #02506a;
+    .galeria-espalhada {
+       
+        display: none; 
+    }
+    
+  
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
