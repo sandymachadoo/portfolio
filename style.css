@@ -112,9 +112,6 @@ section {
   margin: auto;
 }
 
-/* ======================================= */
-/* 3. NAVBAR                               */
-/* ======================================= */
 
 .navbar {
   background: linear-gradient(90deg, #fbfdfd 0%, #eff1f1 100%);
@@ -396,10 +393,6 @@ section {
     background-color: #02506a;
 }
 
-/* ======================================= */
-/* 8. TIMELINE (Experiência)               */
-/* ======================================= */
-
 .timeline {
   position: relative;
   margin: 60px auto;
@@ -501,7 +494,7 @@ section {
 
     .right-section {
         padding: 40px 20px;
-        order: 1; /* Faz a imagem vir primeiro */
+        order: 1;
     }
 
     .title {
@@ -613,3 +606,118 @@ section {
         gap: 10px;
     }
 }
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  background-color: #f7f7f7;
+  padding: 40px;
+}
+
+.home-image img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.home-content {
+  max-width: 480px;
+}
+
+.home-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.home-content h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.home-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.home-buttons a {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-buttons a:nth-child(1) {
+  background-color: #f2b705; 
+}
+
+.home-buttons a:nth-child(2) {
+  background-color: #ff3b2f; 
+}
+
+.home-buttons a:nth-child(3) {
+  background-color: #7ad6d2; 
+}
+.home-buttons a:nth-child(4) {
+  background-color: #c90bf8; 
+}
+.home-buttons a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 900px) {
+  .home-buttons a {
+    width: 85px;
+    height: 85px;
+    font-size: 0.85rem;
+  }
+}
+
+  .home-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .home-buttons a {
+  width: 100px;      
+  height: 100px;     
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;      
+  justify-content: center;  
+
+  text-align: center;
+  line-height: 1.2;        
+  padding: 12px;            
+
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #000;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
